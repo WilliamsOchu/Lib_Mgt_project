@@ -8,6 +8,11 @@ class TestDatabaseConnection(unittest.TestCase):
         app.config['TESTING'] = True
         app.config['WTF_CSRF_ENABLED'] = False
         app.config['MYSQL_DB'] = 'test_library_db'
+        app.config['MYSQL_PASSWORD'] = 'papa123'
+        app.config['SECRET_KEY'] = 'papa123'
+        app.config['MYSQL_HOST'] = 'localhost'
+        app.config['MYSQL_USER'] = 'root'
+        
         self.app = app.test_client()
         self.app_context = app.app_context()
         self.app_context.push()
