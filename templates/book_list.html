@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+    <h1>Available_Books</h1>
+    <ul>
+        {% for book in books %}
+        <li>{{ book[1] }} | {{ book[2] }} | {{ book[3] }} | {{ book[4] }} | {{ book[5] }} | {{ book[6] }} | {{ book[7] }} | {{ book[8] }} | {{ book[9] }} | ({{ book[10] }})</li>
+        {% endfor %}
+    </ul>
+    <p> Enter book name and no of copies you would like to borrow </p>
+    <form action="{{ url_for('book_list') }}" method="POST">
+        <input type="text" name="title" placeholder="Book_Name" required>
+        <input type="number" name="no_of_copy" placeholder="No_of_Copies" required>
+        <button type="submit">Borrow Book</button>
+        
+    </form>
+
+
+
+
+</body>
+</html>

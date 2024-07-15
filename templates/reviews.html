@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrow Book</title>
+</head>
+<body>
+    <h1>Library Management System</h1>
+    <p> Book Reviews </p>
+    <ul>
+        {% for rev in reviews %}
+        <li>{{ rev[1] }} | {{ rev[2] }} | ({{ rev[3] }})</li>
+        {% endfor %}
+    </ul>
+
+
+
+</body>
+</html>

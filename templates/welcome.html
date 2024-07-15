@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome User</title>
+</head>
+<body>
+    <h1>Welcome to the Library Management System</h1>
+    <p> You are Logged in!!! </p>
+</br>
+<p> Select your role </p>
+
+<button type="button" class="btn btn-primary"><a href="{{ url_for('admins') }}">Admin</a></button>
+<button type="button" class="btn btn-primary"><a href="{{ url_for('lib_welcome') }}">Librarian</a></button>
+<button type="button" class="btn btn-primary"><a href="{{ url_for('mem_welcome') }}">Member</a></button>
+</br>
+<a href="{{ url_for('books') }}">Books</a>
+<a href="{{ url_for('users') }}">Users</a>
+<a href="{{ url_for('login') }}">User Login</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+    <h1>Books</h1>
+    <form action="{{ url_for('add_book') }}" method="POST">
+        <input type="text" name="title" placeholder="Title" required>
+        <input type="text" name="author" placeholder="Author" required>
+        <input type="text" name="isbn" placeholder="ISBN" required>
+        <input type="text" name="genre" placeholder="Genre" required>
+        <input type="number" name="publication_date" placeholder="Pub_Date" required>
+        <input type="text" name="publisher" placeholder="Publisher" required>
+        <input type="number" name="no_of_copy" placeholder="No_of_Copies" required>
+        <input type="number" name="categoryid" placeholder="Category_ID" required>
+        <input type="number" name="rackid" placeholder="Rack_ID" required>
+        <input type="number" name="added_on" placeholder="Date_Added" required>
+        <button type="submit">Add Book</button>
+    </form>
+    <ul>
+        {% for book in books %}
+        <li>{{ book[1] }} | {{ book[2] }} | {{ book[3] }} | {{ book[4] }} | {{ book[5] }} | {{ book[6] }} | {{ book[7] }} | {{ book[8] }} | {{ book[9] }} | ({{ book[10] }})</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
